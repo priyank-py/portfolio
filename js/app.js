@@ -1,0 +1,1 @@
+const devType = document.querySelector('#dev-type')

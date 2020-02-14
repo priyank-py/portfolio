@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+<!-- Sidebar begins -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+  
+    <!--<div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+        <p>Content...</p>
+    </div>-->
+<!-- Sidebar ends -->
+<div id="main">
+<!-- Header begin -->
+    <header class="">
+        <!-- Rounded switch -->
+        <div class="top d-inline navbar p-3">
+        <button class="openbtn" onclick="doToggle()">&#9776;</button>
+            <a href="#" class="navbar-brand">
+                Pk
+            </a>
+            <span class="float-right d-flex align-items-center justify-content-center mt-2 mr-2">
+                <span class="mb-2 mr-2">Dark Mode</span>
+                <label class="switch ">
+                    <input type="checkbox" id="darkmode">
+                    <span class="slider round"></span>
+                </label>
+            </span>
+        </div>
+        <div class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Social Media
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">LinkedIn</a>
+                            <a class="dropdown-item" href="#">Github</a>
+                            <!-- <div class="dropdown-divider"></div> -->
+                            <a class="dropdown-item" href="#">Twitter</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li> -->
+                </ul>
+                
+            </div>
+        </div>
+    </header>
+<!-- End of header -->
+
+<!-- Footer begin -->
+    <footer class="jumbotron jumbotron-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="" alt="">
+                <h2 class="text-center">Priyank</h2>
+                <h4 class="subtitle text-center slide-down float-right mr-4"> <div class="text-success font-weight-bold ml-2" id="dev-type"></div> Developer</h4>
+                        
+                        <!-- <div class="slide-down">
+                            <div>Slide down... </div>
+                        </div> -->
+                        
+            </div>
+            <div class="col-lg-4">
+                
+            </div>
+        </div>
+
+    </footer>
+</div>
+	<script>
+        let t = 0
+        const doToggle = () => {
+            if(t==0){
+                openNav();
+                t = 1;
+            } else if (t=1){
+                closeNav();
+                t = 0
+            }
+        }
+   function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<script>
+    var text = ["Hola", "Hallo", "Merhaba"];
+var counter = 0;
+var elem = $("#dev-type");
+setInterval(change, 3000);
+function change() {
+    elem.fadeOut(function(){
+        elem.html(text[counter]);
+        counter++;
+        if(counter >= text.length) { counter = 0; }
+        elem.fadeIn();
+    });
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <!-- Dark mode js -->
+    <script src="./js/mode.js"></script>
+
+    
+
+    <!-- for bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
